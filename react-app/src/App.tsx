@@ -1,4 +1,5 @@
 import Alert from "./Components/Alert";
+import Button from "./Components/Button";
 import ListGroup from "./Components/ListGroup";
 
 function App() {
@@ -8,9 +9,16 @@ function App() {
     console.log(item);
   };
 
+  const handleButton = () => {
+    console.log("Color");
+  };
+
   return (
     <div>
       <Alert>Hello world</Alert>
+      <Button color="primary" onClick={handleButton}>
+        Button
+      </Button>
       <ListGroup
         items={items}
         heading="Cities"

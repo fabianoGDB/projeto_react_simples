@@ -1,11 +1,13 @@
-import ListGroup from './Components/ListGroup'
+import ListGroup from "./Components/ListGroup";
 
 function App() {
+  let items = ["New York", "San Francisco", "Tokyo", "London", "Los Angeles"];
+
   return (
     <div>
-      <ListGroup />
+      <ListGroup items={items} heading="Cities" />
     </div>
-  )
+  );
 }
 
 export default App;

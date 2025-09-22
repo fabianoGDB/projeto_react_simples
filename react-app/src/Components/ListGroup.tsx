@@ -1,18 +1,24 @@
-function ListGroup() {
-  let items = ["New York", "San Francisco", "Tokyo", "London", "Los Angeles"];
-  //items = [];
+import { useState } from "react";
 
-  let selectedIndex = -1;
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+}
+
+function ListGroup({ items, heading }: ListGroupProps) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List</h1>
+      <h1>List of {heading}</h1>
       {items.length === 0 && <p>No items found</p>}
       <ul className="list-group">
         {items.map((item, idx) => (
           <li
             key={idx}
-            onClick={() => (selectedIndex = idx)}
+            onClick={() => {
+              setSelectedIndex(idx);
+            }}
             className={
               selectedIndex === idx
                 ? "list-group-item active"

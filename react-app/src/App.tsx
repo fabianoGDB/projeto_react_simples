@@ -1,12 +1,11 @@
-
-import './App.css'
-import Message from './Message'
+import HelloWorld from './HelloWorld'
 
 function App() {
-
   return (
-    <div><Message></Message></div>
+    <div>
+      <HelloWorld />
+    </div>
   )
 }
 
-export default App
+export default App;
